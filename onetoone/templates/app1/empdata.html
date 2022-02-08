@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <table class="table table-primary">
+  <thead>
+    <tr>
+      <th scope="col">EMP ID</th>
+      <th scope="col">EMP NAME</th>
+      <th scope="col">EMAIL</th>
+              <th scope="col">MNO</th>
+
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in data %}
+    <tr>
+      <td>{{i.eid}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+        <td>{{i.mno}}</td>
+            <th><button class="btn btn-white btn-lg"><a href="{% url 'updateview' i.eid %}">Update</a></button></th>
+                    <th><button class="btn btn-danger btn-lg"><a href="{% url 'deleteview' i.eid %}">Delete</a></button></th>
+
+
+
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}

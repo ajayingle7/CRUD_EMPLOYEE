@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content1 %}
+
+
+
+<div class="container">
+    <div class="jumbotron">
+<h1 align="center">Tata Consultancy Services Employee Portal</h1>
+<br>
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{form|crispy}}
+
+            <input type="submit" value="Submit" class="btn btn-dark btn-lg">
+
+            <input type="reset" value="Reset" class="btn btn-dark btn-lg">
+
+
+
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
+
+

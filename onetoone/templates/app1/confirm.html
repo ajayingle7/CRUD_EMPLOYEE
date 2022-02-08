@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block content1 %}
+<div class="container">
+    <div class="jumbotron">
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <h1>Are you sure to delete record of {{data.name}}</h1>
+            <input type="submit" value="Yes" class="btn btn-danger">
+            <button class="btn btn-dark btn-lg"><a href="{% url 'empdataview' %}">No</a></button>
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}
